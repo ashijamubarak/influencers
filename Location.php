@@ -40,7 +40,7 @@ public function __construct(){
 		//$data['districtid'] = $districtid;
        // $stateid= $this->uri->segment(4);
 		//$data['stateid'] = $stateid;
-		$this->load->view('add_state');
+		$this->load->view('Location/add_state');
 		
          // $this->load->view('header/header');
 		// $this->load->view('leftnavigation/nav1');
@@ -76,7 +76,7 @@ public function add_city(){
 		    
         $randno=rand(10000, 1000000);
 		$data = array(
-		    'id'=>"itm_loc".md5($randno),
+		    'loc_id'=>"itm_loc".md5($randno),
 			
 			'name' => $this->input->post('name'),
 			'lat' => $this->input->post('lat'),
@@ -107,7 +107,7 @@ public function add_city(){
 	{
 $randno=rand(10000, 1000000);
 		$data = array(
-		    'id'=>"itm_loc".md5($randno),
+		    'loc_id'=>"itm_loc".md5($randno),
 			'sub_id_1'=>$this->input->post('stateid'),
 			'name' => $this->input->post('name'),
 			'lat' => $this->input->post('lat'),
@@ -138,7 +138,7 @@ $randno=rand(10000, 1000000);
 	{
   $randno=rand(10000, 1000000);
 		$data = array(
-		 'id'=>"itm_loc".md5($randno),
+		 'loc_id'=>"itm_loc".md5($randno),
 		    'sub_id_1'=>$this->input->post('stateid'),
 		    'sub_id_2'=>$this->input->post('districtid'),
 			'name' => $this->input->post('name'),
